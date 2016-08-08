@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EvenTogether.LoginPage"
+             BackgroundColor="#432554">
+
+  <Grid Padding="30">
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="3*"/>
+      <RowDefinition Height="7*"/>
+    </Grid.RowDefinitions>
+
+    <!--Imagem-->
+    <Image Grid.Row="0"
+           Source="Login_Image.png"
+           HorizontalOptions="Center"
+           VerticalOptions="Start"
+           HeightRequest="100"
+           WidthRequest="100"/>
+
+    <!--Dados de login-->
+    <StackLayout Grid.Row="1"
+                 Spacing="30"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start">
+
+      <!--E-mail ou telefone-->
+      <StackLayout Orientation="Horizontal"
+                   HorizontalOptions="FillAndExpand">
+
+        <!--Imagem User-->
+        <Image Source="user.png"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               HeightRequest="40"
+               WidthRequest="40"/>
+
+        <Entry x:Name="txtLogin"
+               TextColor="White"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               Placeholder="E-mail ou Telefone"
+               PlaceholderColor="White"
+               WidthRequest="250"/>
+
+      </StackLayout>
+
+      <!--Senha-->
+      <StackLayout Orientation="Horizontal"
+                   HorizontalOptions="FillAndExpand">
+
+        <!--Imagem senha-->
+        <Image Source="password.png"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               HeightRequest="40"
+               WidthRequest="40"/>
+
+        <Entry x:Name="txtPassword"
+               TextColor="White"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               Placeholder="Senha"
+               PlaceholderColor="White"
+               IsPassword="True"
+               WidthRequest="250"/>
+
+      </StackLayout>
+
+      <!--Botão Entrar-->
+      <Button Text="Entrar"
+              TextColor="#432554"
+              BorderWidth="1"
+              BackgroundColor="White"
+              BorderColor="White"
+              Clicked="Login_Clicked"/>
+
+      <!--Botão Cadastre-se-->
+      <Button Text="Cadastre-se"
+              TextColor="#432554"
+              BorderWidth="1"
+              BackgroundColor="White"
+              BorderColor="White"
+              Clicked="Register_Clicked"/>
+
+    </StackLayout>
+    
+  </Grid>
+  
+</ContentPage>
