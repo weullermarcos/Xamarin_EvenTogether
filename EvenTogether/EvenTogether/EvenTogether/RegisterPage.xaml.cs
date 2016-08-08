@@ -14,5 +14,30 @@ namespace EvenTogether
         {
             InitializeComponent();
         }
+
+        void UserType_Toggled(object sender, ToggledEventArgs e)
+        {
+            if (stchUserType.IsToggled)
+            {
+                lblUserType.Text = "Igreja";
+            }
+            else
+            {
+                lblUserType.Text = "Membro";
+            }
+        }
+
+        void Genre_Toggled(object sender, ToggledEventArgs e)
+        {
+            if (stchGenre.IsToggled)
+            {
+                lblGenre.Text = "Feminino";
+            }
+            else
+            {
+                lblGenre.Text = "Masculino";
+            }
+        }
+
     }
 }

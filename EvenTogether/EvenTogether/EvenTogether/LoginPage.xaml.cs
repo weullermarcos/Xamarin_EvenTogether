@@ -17,6 +17,18 @@ namespace EvenTogether
 
         async void Login_Clicked(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtLogin.Text))
+            {
+                await DisplayAlert("Aviso", "O Campo Login é de preenchimento obrigatório.", "OK");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtPassword.Text))
+            {
+                await DisplayAlert("Aviso", "O Campo Senha é de preenchimento obrigatório.", "OK");
+                return;
+            }
+
             if (txtLogin.Text == "weuller" && txtPassword.Text ==  "123")
             {
                 App.Current.MainPage = new MainPage();

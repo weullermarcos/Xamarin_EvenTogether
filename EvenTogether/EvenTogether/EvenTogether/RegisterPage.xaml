@@ -1,6 +1,227 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EvenTogether.RegisterPage">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+             x:Class="EvenTogether.RegisterPage"
+             BackgroundColor="White">
+
+  <Grid>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*"/>
+      <RowDefinition Height="9*"/>
+    </Grid.RowDefinitions>
+
+    <!--Novo Cadastro-->
+    <Grid Grid.Row="0" 
+          BackgroundColor="#684B8E"
+          Padding="10,0">
+
+      <!--Novo Cadastro-->
+      <Label Text="Novo Cadastro"
+             TextColor="White"
+             FontSize="22"
+             FontAttributes="Bold"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"/>
+      
+    </Grid>
+
+    <!--Conteúdo do cadastro-->
+    <ScrollView Grid.Row="1">
+      
+      <StackLayout Padding="30"
+                   Spacing="20">
+
+        <!--Tipo de usuário-->
+        <StackLayout Orientation="Horizontal" 
+                     Spacing="10"
+                     HorizontalOptions="Center">
+
+          <Label Text="Tipo de Usuário"
+                 TextColor="#684B8E"
+                 VerticalOptions="Center"/>
+
+          <Switch x:Name="stchUserType"
+                  VerticalOptions="Center"
+                  Toggled="UserType_Toggled"/>
+
+          <Label x:Name="lblUserType"
+                 Text="Membro"
+                 TextColor="#684B8E"
+                 VerticalOptions="Center"/>
+          
+        </StackLayout>
+
+        <!--Formulário de cadastro-->
+        <Grid>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+          </Grid.RowDefinitions>
+
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+          </Grid.ColumnDefinitions>
+
+          <!--Imagem Nome Usuário-->
+          <Image Grid.Row="0"
+                 Grid.Column="0"
+                 Source="name.png"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 HeightRequest="40"
+                 WidthRequest="40"/>
+
+          <!--Nome do usuário-->
+          <Entry Grid.Row="0"
+                 Grid.Column="1"
+                 Placeholder="Nome"
+                 TextColor="#684B8E"
+                 PlaceholderColor="#684B8E"/>
+
+          <!--Imagem Email-->
+          <Image Grid.Row="1"
+                 Grid.Column="0"
+                 Source="email.png"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 HeightRequest="40"
+                 WidthRequest="40"/>
+
+          <!--Email do usuário-->
+          <Entry Grid.Row="1"
+                 Grid.Column="1"
+                 Placeholder="E-mail"
+                 TextColor="#684B8E"
+                 PlaceholderColor="#684B8E"/>
+
+          <!--Imagem Senha-->
+          <Image Grid.Row="2"
+                 Grid.Column="0"
+                 Source="password_black.png"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 HeightRequest="40"
+                 WidthRequest="40"/>
+
+          <!--Senha do usuário-->
+          <Entry Grid.Row="2"
+                 Grid.Column="1"
+                 Placeholder="Senha"
+                 IsPassword="True"
+                 TextColor="#684B8E"
+                 PlaceholderColor="#684B8E"/>
+
+          <!--Imagem Confirmar-Senha-->
+          <Image Grid.Row="3"
+                 Grid.Column="0"
+                 Source="password_black.png"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 HeightRequest="40"
+                 WidthRequest="40"/>
+
+          <!--Confirmação de Senha do usuário-->
+          <Entry Grid.Row="3"
+                 Grid.Column="1"
+                 Placeholder="Confirmar Senha"
+                 IsPassword="True"
+                 TextColor="#684B8E"
+                 PlaceholderColor="#684B8E"/>
+
+          <!--Imagem Endereço-->
+          <Image Grid.Row="4"
+                 Grid.Column="0"
+                 Source="location.png"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 HeightRequest="40"
+                 WidthRequest="40"/>
+
+          <!--Endereço do usuário-->
+          <Entry Grid.Row="4"
+                 Grid.Column="1"
+                 Placeholder="Endereço"
+                 TextColor="#684B8E"
+                 PlaceholderColor="#684B8E"/>
+
+          <!--Imagem Data Nascimento-->
+          <Image Grid.Row="5"
+                 Grid.Column="0"
+                 Source="date.png"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 HeightRequest="40"
+                 WidthRequest="40"/>
+
+          <!--Data Nascimento do usuário-->
+          <Entry Grid.Row="5"
+                 Grid.Column="1"
+                 Placeholder="Data de Nascimento"
+                 TextColor="#684B8E"
+                 PlaceholderColor="#684B8E"/>
+
+          <!--Imagem Igreja-->
+          <Image Grid.Row="6"
+                 Grid.Column="0"
+                 Source="church.png"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 HeightRequest="40"
+                 WidthRequest="40"/>
+
+          <!--Igreja do usuário-->
+          <Entry Grid.Row="6"
+                 Grid.Column="1"
+                 Placeholder="Ministério"
+                 TextColor="#684B8E"
+                 PlaceholderColor="#684B8E"/>
+
+          <!--Imagem Igreja-->
+          <Image Grid.Row="7"
+                 Grid.Column="0"
+                 Source="wc.png"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 HeightRequest="40"
+                 WidthRequest="40"/>
+
+          <!--Sexo-->
+          <StackLayout Grid.Row="7"
+                       Grid.Column="1" 
+                       Orientation="Horizontal"
+                       Spacing="10"
+                       HorizontalOptions="Start">
+
+            <Switch x:Name="stchGenre"
+                    VerticalOptions="Center"
+                    Toggled="Genre_Toggled"/>
+
+            <Label x:Name="lblGenre"
+                   Text="Masculino"
+                   TextColor="#684B8E"
+                   VerticalOptions="Center"/>
+
+          </StackLayout>
+
+        </Grid>
+
+        <Button Text="Cadastrar"
+                TextColor="White"
+                BackgroundColor="#684B8E"/>
+        
+      </StackLayout>
+      
+    </ScrollView>
+    
+  </Grid>
+
 </ContentPage>
