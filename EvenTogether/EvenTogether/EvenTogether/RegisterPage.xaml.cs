@@ -39,5 +39,19 @@ namespace EvenTogether
             }
         }
 
+        protected override bool OnBackButtonPressed()
+        {
+            //redireciona para a página de Login
+            App.Current.MainPage = new LoginPage();
+            return true;
+        }
+
+        
+        void Register_Clicked(object sender, EventArgs e)
+        {
+            //redireciona para a página inicial
+            App.Current.MainPage = new MainPage();
+        }
+
     }
 }

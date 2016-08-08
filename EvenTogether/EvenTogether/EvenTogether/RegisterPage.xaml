@@ -216,7 +216,8 @@
 
         <Button Text="Cadastrar"
                 TextColor="White"
-                BackgroundColor="#684B8E"/>
+                BackgroundColor="#684B8E"
+                Clicked="Register_Clicked"/>
         
       </StackLayout>
       

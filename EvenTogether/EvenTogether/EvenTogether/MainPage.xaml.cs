@@ -13,5 +13,13 @@ namespace EvenTogether
         {
             InitializeComponent();
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            //redireciona para a página de Login
+            App.Current.MainPage = new LoginPage();
+            return true;
+        }
+
     }
 }
