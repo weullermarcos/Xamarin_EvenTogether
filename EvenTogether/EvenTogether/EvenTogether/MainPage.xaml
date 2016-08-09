@@ -5,6 +5,13 @@
              x:Class="EvenTogether.MainPage"
              BackgroundColor="White">
 
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <OnPlatform.iOS>
+        0, 20, 0, 0
+      </OnPlatform.iOS>
+    </OnPlatform>
+  </ContentPage.Padding>
 
   <Grid>
 
@@ -71,7 +78,7 @@
 
       <ListView.ItemTemplate>
         <DataTemplate>
-          <ViewCell>
+          <ViewCell Tapped="EventDetail_Tapped">
 
             <Grid>
               
@@ -102,12 +109,14 @@
                 <!--Nome do evento-->
                 <Label Grid.Row="0" 
                        Text="{Binding Name}"
+                       TextColor="Black"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
 
                 <!--Preço do evento-->
                 <Label Grid.Row="1"
                        Text="{Binding Price}"
+                       TextColor="Black"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
                 
@@ -124,12 +133,14 @@
                 <!--Data do evento-->
                 <Label Grid.Row="0"
                        Text="{Binding Date}"
+                       TextColor="Black"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
 
                 <!--Local do evento-->
                 <Label Grid.Row="1"
                        Text="{Binding Address}"
+                       TextColor="Black"
                        HorizontalOptions="Start"
                        VerticalOptions="Center"/>
 

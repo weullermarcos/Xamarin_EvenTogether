@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EvenTogether.EventDetailPage"
+             BackgroundColor="White">
+
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <OnPlatform.iOS>
+        0, 20, 0, 0
+      </OnPlatform.iOS>
+    </OnPlatform>
+  </ContentPage.Padding>
+
+  <Grid>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*"/>
+      <RowDefinition Height="9*"/>
+    </Grid.RowDefinitions>
+
+    <!--Detalhar Evento-->
+    <Grid Grid.Row="0"
+          BackgroundColor="#684B8E"
+          Padding="10,0">
+
+      <!--Detalhar Evento-->
+      <Label Text="Detalhar Evento"
+             TextColor="White"
+             FontSize="22"
+             FontAttributes="Bold"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"/>
+
+    </Grid>
+
+  </Grid>
+  
+</ContentPage>
