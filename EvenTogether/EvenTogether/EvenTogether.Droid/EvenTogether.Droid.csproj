@@ -169,18 +169,11 @@
     <AndroidResource Include="Resources\drawable\add_event.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\price.png" />
     <AndroidResource Include="Resources\drawable\evento4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\evento3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\evento2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\evento1.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\evento2.png" />
+    <AndroidResource Include="Resources\drawable\evento3.png" />
     <Content Include="Resources\evento5.png" />
     <Content Include="Resources\evento6.png" />
   </ItemGroup>

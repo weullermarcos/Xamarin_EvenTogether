@@ -16,7 +16,9 @@
 
     <Grid.RowDefinitions>
       <RowDefinition Height="1*"/>
-      <RowDefinition Height="9*"/>
+      <RowDefinition Height="1*"/>
+      <RowDefinition Height="4*"/>
+      <RowDefinition Height="4*"/>
     </Grid.RowDefinitions>
 
     <!--Detalhar Evento-->
@@ -34,6 +36,157 @@
 
     </Grid>
 
+    <!--Nome Evento-->
+    <Label Grid.Row="1"
+           x:Name="lblEventName"
+           TextColor="#684B8E"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"/>
+
+    <!--Formulário de cadastro-->
+    <Grid Grid.Row="2">
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="2*"/>
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="8*"/>
+      </Grid.ColumnDefinitions>
+
+      <!--Imagem Data Inicio-->
+      <Image Grid.Row="0"
+             Grid.Column="0"
+             Source="date.png"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             HeightRequest="40"
+             WidthRequest="40"/>
+
+      <!--Data Inicio-->
+      <Label Grid.Row="0"
+             Grid.Column="1"
+             x:Name="lblInitialDate"
+             VerticalOptions="Center"
+             FontSize="16"
+             TextColor="#684B8E"/>
+
+      <!--Imagem Data Fim-->
+      <Image Grid.Row="1"
+             Grid.Column="0"
+             Source="date.png"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             HeightRequest="40"
+             WidthRequest="40"/>
+
+      <!--Data Fim-->
+      <Label Grid.Row="1"
+             Grid.Column="1"
+             x:Name="lblFinalDate"
+             FontSize="16"
+             VerticalOptions="Center"
+             TextColor="#684B8E"/>
+
+      <!--Imagem Endreço-->
+      <Image Grid.Row="2"
+             Grid.Column="0"
+             Source="location.png"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             HeightRequest="40"
+             WidthRequest="40"/>
+
+      <!--Endreço-->
+      <Label Grid.Row="2"
+             Grid.Column="1"
+             x:Name="lblAddress"
+             FontSize="16"
+             VerticalOptions="Center"
+             TextColor="#684B8E"/>
+      
+      <!--Imagem Preço-->
+      <Image Grid.Row="3"
+             Grid.Column="0"
+             Source="price.png"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             HeightRequest="40"
+             WidthRequest="40"/>
+
+      <!--Preço-->
+      <Label Grid.Row="3"
+             Grid.Column="1"
+             x:Name="lblPrice"
+             FontSize="16"
+             VerticalOptions="Center"
+             TextColor="#684B8E"/>
+
+    </Grid>
+
+    <!--Fotos-->
+    <Grid Grid.Row="3" 
+          RowSpacing="5"
+          ColumnSpacing="5" 
+          Padding="20">
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="4*"/>
+        <RowDefinition Height="4*"/>
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="2*"/>
+      </Grid.ColumnDefinitions>
+
+      <!--Fotos-->
+      <Label Grid.Row="0"
+             Grid.Column="0"
+             Text="Fotos:"
+             TextColor="#684B8E"
+             FontAttributes="Bold"
+             FontSize="18"
+             HorizontalOptions="Start"
+             VerticalOptions="Center"/>
+
+      <!--Evento 1-->
+      <Image Grid.Row="1"
+             Grid.Column="0"
+             Source="evento1.png"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"/>
+
+      <!--Evento 2-->
+      <Image Grid.Row="1"
+             Grid.Column="1"
+             Source="evento2.png"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"/>
+
+      <!--Evento 3-->
+      <Image Grid.Row="2"
+             Grid.Column="0"
+             Source="evento3.png"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"/>
+
+      <!--Evento 4-->
+      <Image Grid.Row="2"
+             Grid.Column="1"
+             Source="evento4.png"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"/>
+
+    </Grid>
+    
   </Grid>
   
 </ContentPage>

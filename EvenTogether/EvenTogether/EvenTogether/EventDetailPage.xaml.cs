@@ -16,6 +16,8 @@ namespace EvenTogether
         public EventDetailPage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         public EventDetailPage(Event selectedEvent)
@@ -23,12 +25,21 @@ namespace EvenTogether
             _receivedEvent = selectedEvent;
 
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
+
+            lblEventName.Text = _receivedEvent.Name;
+            lblInitialDate.Text = _receivedEvent.Date.AddDays(+1).ToString();
+            lblFinalDate.Text = _receivedEvent.Date.AddDays(+2).ToString();
+            lblAddress.Text = _receivedEvent.Address;
+            lblPrice.Text = _receivedEvent.Price;
         }
 
         protected override bool OnBackButtonPressed()
         {
             //redireciona para a página de Login
-            App.Current.MainPage = new MainPage();
+            Navigation.PopAsync();
+            //App.Current.MainPage = new MainPage();
             return true;
         }
     }

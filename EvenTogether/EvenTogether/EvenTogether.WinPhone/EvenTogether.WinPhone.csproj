@@ -118,6 +118,7 @@
     <Content Include="ok.png" />
     <Content Include="password.png" />
     <Content Include="password_black.png" />
+    <Content Include="price.png" />
     <Content Include="user.png" />
     <Content Include="wc.png" />
   </ItemGroup>

@@ -16,6 +16,8 @@ namespace EvenTogether
         {
             InitializeComponent();
 
+            NavigationPage.SetHasNavigationBar(this, false);
+
             //criando um evento de tapped para a imagem
             var tapImage = new TapGestureRecognizer();
             tapImage.Tapped += TapImage_Tapped;
@@ -78,14 +80,15 @@ namespace EvenTogether
 
             if (item == null)
                 return;
-
-            App.Current.MainPage = new EventDetailPage(item);
+            Navigation.PushAsync(new EventDetailPage(item));
+            //App.Current.MainPage = new EventDetailPage(item);
         }
 
         protected override bool OnBackButtonPressed()
         {
             //redireciona para a página de Login
-            App.Current.MainPage = new LoginPage();
+            Navigation.PopAsync();
+            //App.Current.MainPage = new LoginPage();
             return true;
         }
 

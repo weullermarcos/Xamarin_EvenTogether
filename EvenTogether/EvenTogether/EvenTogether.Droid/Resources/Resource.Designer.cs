@@ -3348,8 +3348,8 @@ namespace EvenTogether.Droid
 			// aapt resource value: 0x7f02006f
 			public const int name = 2130837615;
 			
-			// aapt resource value: 0x7f020075
-			public const int notification_template_icon_bg = 2130837621;
+			// aapt resource value: 0x7f020076
+			public const int notification_template_icon_bg = 2130837622;
 			
 			// aapt resource value: 0x7f020070
 			public const int ok = 2130837616;
@@ -3361,10 +3361,13 @@ namespace EvenTogether.Droid
 			public const int password_black = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int user = 2130837619;
+			public const int price = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int wc = 2130837620;
+			public const int user = 2130837620;
+			
+			// aapt resource value: 0x7f020075
+			public const int wc = 2130837621;
 			
 			static Drawable()
 			{

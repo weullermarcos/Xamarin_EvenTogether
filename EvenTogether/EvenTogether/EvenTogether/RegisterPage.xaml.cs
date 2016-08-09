@@ -13,6 +13,8 @@ namespace EvenTogether
         public RegisterPage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         void UserType_Toggled(object sender, ToggledEventArgs e)
@@ -42,7 +44,8 @@ namespace EvenTogether
         protected override bool OnBackButtonPressed()
         {
             //redireciona para a página de Login
-            App.Current.MainPage = new LoginPage();
+            Navigation.PopAsync();
+            //App.Current.MainPage = new LoginPage();
             return true;
         }
 
@@ -50,7 +53,8 @@ namespace EvenTogether
         void Register_Clicked(object sender, EventArgs e)
         {
             //redireciona para a página inicial
-            App.Current.MainPage = new MainPage();
+            Navigation.PushAsync(new MainPage());
+            //App.Current.MainPage = new MainPage();
         }
 
     }

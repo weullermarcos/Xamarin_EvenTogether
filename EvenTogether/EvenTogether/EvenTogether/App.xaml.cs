@@ -13,7 +13,8 @@ namespace EvenTogether
         {
             InitializeComponent();
 
-            MainPage = new EvenTogether.LoginPage();
+            //MainPage = new EvenTogether.LoginPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

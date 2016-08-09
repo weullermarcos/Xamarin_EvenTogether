@@ -13,6 +13,7 @@ namespace EvenTogether
         public LoginPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this,false);
         }
 
         async void Login_Clicked(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace EvenTogether
 
             if (txtLogin.Text == "weuller" && txtPassword.Text ==  "123")
             {
-                App.Current.MainPage = new MainPage();
+                Login();
             }
             else
             {
@@ -39,9 +40,17 @@ namespace EvenTogether
             }
         }
 
+        private void Login()
+        {
+            Navigation.PushAsync(new MainPage());
+            //App.Current.MainPage = new MainPage();
+        }
+
         void Register_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new RegisterPage();
+
+            Navigation.PushAsync(new RegisterPage());
+            //App.Current.MainPage = new RegisterPage();
         }
 
     }
