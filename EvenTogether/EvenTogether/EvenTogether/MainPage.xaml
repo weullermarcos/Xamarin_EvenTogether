@@ -6,7 +6,143 @@
              BackgroundColor="White">
 
 
-  <Label Text="Usuário Logado" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Grid>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*"/>
+      <RowDefinition Height="9*"/>
+    </Grid.RowDefinitions>
+
+    <!--Menu superior-->
+    <Grid Grid.Row="0"
+          BackgroundColor="White"
+          Padding="0"
+          Grid.ColumnSpacing="1">
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="2*"/>
+      </Grid.ColumnDefinitions>
+
+      <!--Menu Hamburguer-->
+      <Grid Grid.Column="0" 
+            BackgroundColor="#684B8E">
+        
+        <Image x:Name="imgMenu"
+               Source="menu.png"
+               WidthRequest="30"
+               HeightRequest="30"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        
+      </Grid>
+
+      <!--Contatos-->
+      <Grid Grid.Column="1" BackgroundColor="#684B8E">
+
+        <Image x:Name="imgContact"
+               Source="contacts.png"
+               WidthRequest="30"
+               HeightRequest="30"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        
+      </Grid>
+
+      <!--Adicionar evento-->
+      <Grid Grid.Column="2" BackgroundColor="#684B8E">
+        
+        <Image x:Name="imgAddEvent"
+               Source="add_event.png"
+               WidthRequest="30"
+               HeightRequest="30"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        
+      </Grid>
+
+    </Grid>
+
+    <!--Lista de Eventos-->
+    <ListView Grid.Row="1"
+              x:Name="myEventList"
+              VerticalOptions="FillAndExpand">
+
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+
+            <Grid>
+              
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="5*"/>
+              </Grid.ColumnDefinitions>
+
+              <!--Imagem do evento-->
+              <Grid Grid.Column="0"
+                    Padding="5">
+                
+                <Image Source="{Binding ImageSource}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+              
+              </Grid>
+
+              <!--Nome e preço do evento-->
+              <Grid Grid.Column="1">
+
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="2*"/>
+                  <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <!--Nome do evento-->
+                <Label Grid.Row="0" 
+                       Text="{Binding Name}"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+
+                <!--Preço do evento-->
+                <Label Grid.Row="1"
+                       Text="{Binding Price}"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+                
+              </Grid>
+
+              <!--Data e local do evento-->
+              <Grid Grid.Column="2">
+
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="2*"/>
+                  <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <!--Data do evento-->
+                <Label Grid.Row="0"
+                       Text="{Binding Date}"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+
+                <!--Local do evento-->
+                <Label Grid.Row="1"
+                       Text="{Binding Address}"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+
+              </Grid>
+              
+            </Grid>
+            
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    
+  </Grid>
 
 
 </ContentPage>

@@ -96,6 +96,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add_event.png" />
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\SmallLogo.scale-240.png" />
     <Content Include="Assets\SplashScreen.scale-240.png" />
@@ -103,10 +104,16 @@
     <Content Include="Assets\StoreLogo.scale-240.png" />
     <Content Include="Assets\WideLogo.scale-240.png" />
     <Content Include="church.png" />
+    <Content Include="contacts.png" />
     <Content Include="date.png" />
     <Content Include="email.png" />
+    <Content Include="evento1.png" />
+    <Content Include="evento2.png" />
+    <Content Include="evento3.png" />
+    <Content Include="evento4.png" />
     <Content Include="location.png" />
     <Content Include="Login_Image.png" />
+    <Content Include="menu.png" />
     <Content Include="name.png" />
     <Content Include="ok.png" />
     <Content Include="password.png" />

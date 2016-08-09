@@ -176,6 +176,27 @@
   <ItemGroup>
     <BundleResource Include="Resources\wc.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\contacts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add_event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\evento4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\evento3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\evento2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\evento1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
