@@ -80,14 +80,14 @@ namespace EvenTogether
 
             if (item == null)
                 return;
-            Navigation.PushAsync(new EventDetailPage(item));
+            Navigation.PushModalAsync(new EventDetailPage(item));
             //App.Current.MainPage = new EventDetailPage(item);
         }
 
         protected override bool OnBackButtonPressed()
         {
             //redireciona para a página de Login
-            Navigation.PopAsync();
+            Navigation.PopModalAsync();
             //App.Current.MainPage = new LoginPage();
             return true;
         }

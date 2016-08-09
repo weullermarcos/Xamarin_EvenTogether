@@ -42,14 +42,14 @@ namespace EvenTogether
 
         private void Login()
         {
-            Navigation.PushAsync(new MainPage());
+            Navigation.PushModalAsync(new MainPage());
             //App.Current.MainPage = new MainPage();
         }
 
         void Register_Clicked(object sender, EventArgs e)
         {
 
-            Navigation.PushAsync(new RegisterPage());
+            Navigation.PushModalAsync(new RegisterPage());
             //App.Current.MainPage = new RegisterPage();
         }
 

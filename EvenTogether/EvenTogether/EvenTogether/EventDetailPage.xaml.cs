@@ -38,7 +38,7 @@ namespace EvenTogether
         protected override bool OnBackButtonPressed()
         {
             //redireciona para a página de Login
-            Navigation.PopAsync();
+            Navigation.PopModalAsync();
             //App.Current.MainPage = new MainPage();
             return true;
         }
